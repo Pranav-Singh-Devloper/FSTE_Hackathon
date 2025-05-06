@@ -28,6 +28,36 @@ import {
 } from "lucide-react";
 import cldImage from "./images/cld.png";
 
+const handleScreenshots = () => {
+  const link = document.createElement("a");
+  link.href = "/Screenshots.zip"; // Use the imported image path
+  link.download = "Screenshots.zip"; // Set the desired file name
+  link.click();
+};
+const handleSFDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/sfd.mdl"; // Use the imported image path
+  link.download = "sfd.mdl"; // Set the desired file name
+  link.click();
+};
+const handlePDF = () => {
+  const link = document.createElement("a");
+  link.href = "/team7.pdf"; // Use the imported image path
+  link.download = "Team7_SystemsHackathon2025.pdf"; // Set the desired file name
+  link.click();
+};
+const handleCLD = () => {
+  const link = document.createElement("a");
+  link.href = "/cld.mdl"; // Use the imported image path
+  link.download = "cld.mdl"; // Set the desired file name
+  link.click();
+};
+const handleDownloadModel = () => {
+  const link = document.createElement("a");
+  link.href = "/vensimModel.mdl"; // Use the imported image path
+  link.download = "vensimModel.mdl"; // Set the desired file name
+  link.click();
+};
 const handleDownloadImage = () => {
   const link = document.createElement("a");
   link.href = cldImage; // Use the imported image path
@@ -226,33 +256,33 @@ export default function InterdisciplinaryEducationApp() {
               <h2 className="text-2xl font-semibold mb-6">Team Introduction</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
                 <TeamMember
-                  name="Krishnadevan"
-                  role="240101069"
-                  photoUrl="/api/placeholder/150/150"
+                  name="Krishnadevan Manju"
+                  role="CLD, Research & SFD"
+                  photoUrl="/krishna.png"
                 />
                 <TeamMember
                   name="Pranav Singh"
-                  role="09345823423"
-                  photoUrl="/api/placeholder/150/150"
+                  role="Website Building"
+                  photoUrl="pranav.jpeg"
                 />
                 <TeamMember
-                  name="Nandi"
-                  role="092384523t"
-                  photoUrl="/api/placeholder/150/150"
+                  name="Hemanth Tenneti"
+                  role="Report Writing, Website, and CLD"
+                  photoUrl="/hemanth.png"
                 />
                 <TeamMember
-                  name="Hadole"
-                  role="03498523"
-                  photoUrl="/api/placeholder/150/150"
+                  name="Somraj Nandi"
+                  role="Research"
+                  photoUrl="/somraj.jpeg"
                 />
                 <TeamMember
-                  name="1080"
-                  role="9380457184274098"
-                  photoUrl="/api/placeholder/150/150"
+                  name="Omkar Hadole"
+                  role="Research"
+                  photoUrl="omkar.jpeg"
                 />
               </div>
               <p className="mt-6 text-gray-400">
-                Indian Institute of Education Innovation
+                Rishihood University, Sonipat, Haryana
               </p>
             </div>
           </div>
@@ -284,7 +314,7 @@ export default function InterdisciplinaryEducationApp() {
                 <div className="space-y-4">
                   <ResearchInsight
                     title="Faculty Training Gaps"
-                    description="75% of faculty report no formal training in interdisciplinary teaching methods."
+                    description="Majority of the faculty report no formal training in interdisciplinary teaching methods."
                   />
                   <ResearchInsight
                     title="Structural Barriers"
@@ -292,45 +322,8 @@ export default function InterdisciplinaryEducationApp() {
                   />
                   <ResearchInsight
                     title="Course Flexibility"
-                    description="Only 12% of programs offer genuinely flexible credit transfers between departments."
+                    description="Very little programs offer genuinely flexible credit transfers between departments."
                   />
-                </div>
-              </Card>
-
-              <Card title="Stakeholder Mapping">
-                <div className="h-72">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart
-                      data={stakeholderData}
-                      margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-                      barSize={20}
-                    >
-                      <CartesianGrid strokeDasharray="3 3" stroke="#444" />
-                      <XAxis dataKey="name" scale="band" stroke="#aaa" />
-                      <YAxis
-                        stroke="#aaa"
-                        label={{
-                          value: "Interest Level (%)",
-                          angle: -90,
-                          position: "insideLeft",
-                          fill: "#aaa",
-                        }}
-                      />
-                      <Tooltip
-                        contentStyle={{
-                          backgroundColor: "#333",
-                          borderColor: "#666",
-                        }}
-                        labelStyle={{ color: "#fff" }}
-                      />
-                      <Legend />
-                      <Bar
-                        dataKey="value"
-                        fill="#8884d8"
-                        name="Stakeholder Interest"
-                      />
-                    </BarChart>
-                  </ResponsiveContainer>
                 </div>
               </Card>
             </div>
@@ -351,12 +344,15 @@ export default function InterdisciplinaryEducationApp() {
                       className="flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
                     >
                       <Download size={16} className="mr-2" />
-                      Download CLD Image
+                      Download CLD
                     </button>
                   </div>
                 </div>
                 <div className="flex justify-center mb-4">
-                  <button className="flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+                  <button
+                    className="flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                    onClick={handleDownloadModel}
+                  >
                     <Download size={16} className="mr-2" />
                     Download Vensim Model
                   </button>
@@ -372,32 +368,23 @@ export default function InterdisciplinaryEducationApp() {
                     <ul className="list-disc list-inside space-y-1">
                       <li>
                         <span className="text-blue-400">
-                          Interdisciplinary Learning (+)
+                          Interdisciplinary Learning
                         </span>
                         : Central outcome variable
                       </li>
                       <li>
-                        <span className="text-blue-400">
-                          Faculty Training (+)
-                        </span>
-                        : Positively impacts interdisciplinary education
+                        <span className="text-blue-400">Faculty Training</span>:
+                        Positively impacts interdisciplinary education
                       </li>
                       <li>
                         <span className="text-green-400">
-                          Curriculum Flexibility (+)
+                          Curriculum Flexibility
                         </span>
                         : Enables cross-disciplinary study
                       </li>
                       <li>
-                        <span className="text-yellow-400">
-                          Student Engagement (+)
-                        </span>
-                        : Both a driver and outcome of interdisciplinary
-                        approaches
-                      </li>
-                      <li>
                         <span className="text-pink-400">
-                          Industry Relevance (+)
+                          Industry Relevance
                         </span>
                         : Reinforces value of interdisciplinary skills
                       </li>
@@ -409,20 +396,89 @@ export default function InterdisciplinaryEducationApp() {
                       Feedback Loops
                     </h3>
                     <p className="mb-2">
-                      <span className="font-semibold text-blue-400">
-                        R1 (Reinforcing)
+                      <span className="font-semibold text-red-400">
+                        R1 (Reinforcing) Cultural Innovation Loop:{" "}
                       </span>
-                      : Faculty training increases interdisciplinary learning,
-                      which increases student engagement, which further drives
-                      faculty training adoption.
+                      An increase in the Innovation Culture Index leads to an
+                      increase in Administrative Willingness. This, in turn,
+                      promotes greater Faculty Autonomy and Collaboration, which
+                      increases Curriculum Flexibility. Greater curriculum
+                      flexibility results in higher Interdisciplinary Learning
+                      Participation, which further boosts the Innovation Culture
+                      Index, completing the reinforcing loop.
+                    </p>
+                    <p>
+                      <span className="font-semibold text-amber-400">
+                        R2 (Reinforcing) Employability Trust Loop:{" "}
+                      </span>
+                      An increase in Interdisciplinary Learning Participation
+                      improves the Employability Perception of interdisciplinary
+                      graduates. As employability perception increases, the
+                      Student Perceived Value of Interdisciplinary Learning also
+                      increases. This heightened perception encourages more
+                      students to participate in interdisciplinary learning,
+                      thereby further increasing Interdisciplinary Learning
+                      Participation.
+                    </p>
+                    <p>
+                      <span className="font-semibold text-orange-400">
+                        R3 (Reinforcing) Faculty-Incentive Loop:{" "}
+                      </span>
+                      An increase in the Reward System for Cross-Department Work
+                      motivates more Faculty Autonomy and Collaboration. This
+                      collaboration enhances Curriculum Flexibility, which
+                      raises Interdisciplinary Learning Participation. As more
+                      students participate, the demand and recognition for
+                      interdisciplinary work rise, reinforcing the importance
+                      and expansion of the reward system.
+                    </p>
+                    <p>
+                      <span className="font-semibold text-yellow-400">
+                        R4 (Reinforcing) Awareness Stakeholder Loop:{" "}
+                      </span>
+                      Stronger implementation of NEP 2020 leads to a wider
+                      Awareness Campaign Reach. As awareness spreads, the
+                      Student Perceived Value of Interdisciplinary Learning
+                      improves. This positive student sentiment influences
+                      Administrative Willingness, which fosters Faculty Autonomy
+                      and Collaboration, enhancing Curriculum Flexibility. With
+                      a more flexible curriculum, Interdisciplinary Learning
+                      Participation increases, thus further strengthening the
+                      call for NEP-aligned reforms and awareness.
+                    </p>
+                    <p>
+                      <span className="font-semibold text-lime-400">
+                        B1 (Balancing) Departmental Resistance Loop:{" "}
+                      </span>
+                      When Interdisciplinary Learning Participation rises,
+                      departments begin to feel territorial and competitive,
+                      increasing the Departmental Silo Intensity. This
+                      resistance reduces Curriculum Flexibility, which then
+                      limits further interdisciplinary participation, thus
+                      counteracting the initial growth.
                     </p>
                     <p>
                       <span className="font-semibold text-green-400">
-                        R2 (Reinforcing)
+                        B2 (Balancing) Public Institution Constraint Loop:{" "}
                       </span>
-                      : Curriculum flexibility enables interdisciplinary
-                      learning, which increases industry relevance, which
-                      creates pressure for more flexible curricula.
+                      An increase in the Public Sector University Autonomy Index
+                      often corresponds with tighter state control, which lowers
+                      Administrative Willingness. This drop reduces Faculty
+                      Autonomy and Collaboration, thereby decreasing Curriculum
+                      Flexibility and ultimately reducing Interdisciplinary
+                      Learning Participation, opposing the intended effects of
+                      reform.
+                    </p>
+                    <p>
+                      <span className="font-semibold text-emerald-400">
+                        B3 (Balancing) Administrative Friction Loop:{" "}
+                      </span>
+                      As Interdisciplinary Learning Participation increases, it
+                      creates more administrative complexity, leading to greater
+                      Academic Administrative Rigidity. This rigidity reduces
+                      Curriculum Flexibility, which in turn discourages further
+                      interdisciplinary participation, thereby balancing or
+                      suppressing the initial increase.
                     </p>
                   </div>
                 </div>
@@ -447,8 +503,10 @@ export default function InterdisciplinaryEducationApp() {
                     color="bg-gradient-to-r from-red-500 to-orange-500"
                   >
                     <p>
-                      Students graduate with narrow specializations, lacking
-                      cross-disciplinary skills required by industry.
+                      Interdisciplinary programs introduced (e.g., in Shivnagar
+                      University) fail to attract students or sustain faculty
+                      engagement. Timetabling clashes, low enrollment, or
+                      inadequate institutional support are common complaints.
                     </p>
                   </AnalysisItem>
 
@@ -457,7 +515,7 @@ export default function InterdisciplinaryEducationApp() {
                     description="Continued separation of disciplines over years"
                     color="bg-gradient-to-r from-yellow-500 to-green-500"
                   >
-                    <div className="h-72">
+                    <div className="h-96">
                       <ResponsiveContainer width="100%" height="100%">
                         <LineChart
                           data={trendData}
@@ -497,6 +555,12 @@ export default function InterdisciplinaryEducationApp() {
                         </LineChart>
                       </ResponsiveContainer>
                     </div>
+                    <p>
+                      Repeated underperformance of interdisciplinary initiatives
+                      across institutions. Initial enthusiasm fades; programs
+                      are sidelined or dissolved. Students prefer established
+                      disciplines with clearer career outcomes.
+                    </p>
                   </AnalysisItem>
 
                   <AnalysisItem
@@ -504,18 +568,13 @@ export default function InterdisciplinaryEducationApp() {
                     description="Departmental silos, rigid assessments, policy inaction"
                     color="bg-gradient-to-r from-blue-500 to-purple-500"
                   >
-                    <ul className="list-disc list-inside space-y-1">
-                      <li>
-                        Traditional departmental structures with minimal
-                        interaction
-                      </li>
-                      <li>Discipline-specific assessment formats</li>
-                      <li>
-                        Lack of incentives for cross-departmental collaboration
-                      </li>
-                      <li>Outdated accreditation requirements</li>
-                      <li>Insufficient policy implementation guidance</li>
-                    </ul>
+                    <p>
+                      Fragmented governance across departments, rigid curricula,
+                      lack of incentives for faculty collaboration, hierarchical
+                      academic culture, and inadequate alignment between policy
+                      and institutional operations. Accreditation and funding
+                      mechanisms favor traditional departments.
+                    </p>
                   </AnalysisItem>
                 </div>
               </Card>
@@ -565,14 +624,65 @@ export default function InterdisciplinaryEducationApp() {
 
               <Card title="Leverage Points">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="p-4 bg-red-900/30 border border-red-800/50 rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2 text-red-300">
+                      Academic Advising Reforms
+                    </h3>
+                    <p>
+                      Helps students make informed academic choices early on
+                      which improves uptake and planning of interdisciplinary
+                      pathways
+                    </p>
+                  </div>
+                  <div className="p-4 bg-orange-900/30 border border-orange-800/50 rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2 text-orange-300">
+                      Evaluation Metric Redesign
+                    </h3>
+                    <p>
+                      Aligns institutional rewards with interdisciplinary
+                      teaching and learning outcomes which promotes system-wide
+                      adoption and long-term sustainability of interdisciplinary
+                      education
+                    </p>
+                  </div>
                   <div className="p-4 bg-blue-900/30 border border-blue-800/50 rounded-lg">
                     <h3 className="text-lg font-semibold mb-2 text-blue-300">
+                      Curriculum and Timetable Flexibility
+                    </h3>
+                    <p>
+                      Alters institutional constraints that limit
+                      interdisciplinary course access which enables students to
+                      pursue combinations across disciplines more freely
+                    </p>
+                  </div>
+                  <div className="p-4 bg-emerald-900/30 border border-emerald-800/50 rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2 text-emerald-300">
                       Academic Bank of Credits
                     </h3>
                     <p>
                       The NEP's proposed Academic Bank of Credits (ABC) can
                       serve as a powerful leverage point to enable true
                       interdisciplinary learning across institutions.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-violet-900/30 border border-violet-800/50 rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2 text-violet-300">
+                      Faculty Incentives and Autonomy
+                    </h3>
+                    <p>
+                      Changes internal motivation structure and encourages
+                      interdisciplinary teaching which would mean more d faculty
+                      would offer innovative and cross-cutting courses
+                    </p>
+                  </div>
+                  <div className="p-4 bg-amber-900/30 border border-amber-800/50 rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2 text-amber-300">
+                      Awareness Through Success Narratives
+                    </h3>
+                    <p>
+                      Shifts mental models and student demand by highlighting
+                      benefits of interdisciplinarity which builds a reinforcing
+                      loop of visibility, interest, and institutional support
                     </p>
                   </div>
                   <div className="p-4 bg-green-900/30 border border-green-800/50 rounded-lg">
@@ -590,8 +700,8 @@ export default function InterdisciplinaryEducationApp() {
 
               <Card title="System Archetypes">
                 <div className="space-y-4">
-                  <div className="p-4 bg-purple-900/30 border border-purple-800/50 rounded-lg">
-                    <h3 className="text-lg font-semibold mb-2 text-purple-300">
+                  <div className="p-4 bg-red-900/30 border border-red-800/50 rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2 text-red-300">
                       "Fixes That Fail"
                     </h3>
                     <p>
@@ -601,14 +711,27 @@ export default function InterdisciplinaryEducationApp() {
                       causes.
                     </p>
                   </div>
+                  <div className="p-4 bg-purple-900/30 border border-purple-800/50 rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2 text-purple-300">
+                      "Shifting the Burden"
+                    </h3>
+                    <p>
+                      Institutions apply superficial fixes - like offering a few
+                      interdisciplinary electives - without addressing deeper
+                      barriers like departmental silos or rigid schedules. These
+                      symptomatic solutions delay systemic reforms and reinforce
+                      the idea that interdisciplinarity is non-essential.
+                    </p>
+                  </div>
                   <div className="p-4 bg-yellow-900/30 border border-yellow-800/50 rounded-lg">
                     <h3 className="text-lg font-semibold mb-2 text-yellow-300">
                       "Success to the Successful"
                     </h3>
                     <p>
-                      Departments with higher funding and prestige continue to
-                      attract resources, creating a self-reinforcing dynamic
-                      that maintains the status quo and limits innovation.
+                      Well-established departments continue receiving support
+                      and visibility, while interdisciplinary initiatives
+                      struggle for resources. This self-reinforcing dynamic
+                      widens the gap, keeping newer programs on the margins.
                     </p>
                   </div>
                 </div>
@@ -880,16 +1003,23 @@ export default function InterdisciplinaryEducationApp() {
                     icon={<BarChart2 size={24} />}
                     description="Full system dynamics model with quantitative relationships"
                   />
+                  <button
+                    className="border-2 border-gray-500 rounded-full hover:bg-white hover:text-gray-900 transition-colors px-4 py-2"
+                    onClick={handleSFDownload}
+                  >
+                    Click here to download SFD
+                  </button>
                   <ResourceCard
                     title="Modeling Tool Screenshots"
                     icon={<PieChart size={24} />}
                     description="Vensim model development process"
                   />
-                  <ResourceCard
-                    title="Stakeholder Interview Transcripts"
-                    icon={<FileText size={24} />}
-                    description="Qualitative insights from education leaders"
-                  />
+                  <button
+                    className="border-2 border-gray-500 rounded-full hover:bg-white hover:text-gray-900 transition-colors px-4 py-2"
+                    onClick={handleScreenshots}
+                  >
+                    Click here to download screenshots
+                  </button>
                 </div>
               </Card>
             </div>
@@ -911,7 +1041,10 @@ export default function InterdisciplinaryEducationApp() {
                       <FileText size={20} className="mr-3 text-blue-400" />
                       <span>Final Report (PDF)</span>
                     </div>
-                    <button className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors flex items-center">
+                    <button
+                      className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors flex items-center"
+                      onClick={handlePDF}
+                    >
                       <Download size={16} className="mr-1" />
                       Download
                     </button>
@@ -921,7 +1054,10 @@ export default function InterdisciplinaryEducationApp() {
                       <BarChart2 size={20} className="mr-3 text-purple-400" />
                       <span>CLD Model File (Vensim)</span>
                     </div>
-                    <button className="px-3 py-1 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors flex items-center">
+                    <button
+                      className="px-3 py-1 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors flex items-center"
+                      onClick={handleCLD}
+                    >
                       <Download size={16} className="mr-1" />
                       Download
                     </button>
@@ -932,26 +1068,36 @@ export default function InterdisciplinaryEducationApp() {
               <Card title="Team Contact Information">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <ContactCard
-                    name="Dr. Priya Sharma"
-                    email="priya.sharma@iiei.edu.in"
+                    name="Hemanth Tenneti"
+                    email="hemanth.tenneti2024@nst.rishihood.edu.in"
                   />
                   <ContactCard
-                    name="Prof. Rajiv Kumar"
-                    email="rajiv.kumar@iiei.edu.in"
+                    name="Pranav Singh"
+                    email="pranav.singh2024@nst.rishihood.edu.in"
                   />
                   <ContactCard
-                    name="Anjali Mehta"
-                    email="anjali.mehta@iiei.edu.in"
+                    name="Krishnadevan M.L"
+                    email="krishnadevan.liby2024@nst.rishihood.edu.in"
+                  />
+                  <ContactCard
+                    name="Omkar Hadole"
+                    email="omkar.hadole2024@nst.rishihood.edu.in"
+                  />
+                  <ContactCard
+                    name="Somraj Nandi"
+                    email="somraj.nandi2024@nst.rishihood.edu.in"
                   />
                 </div>
                 <div className="mt-4">
                   <p className="text-gray-400">
                     Project GitHub Repository:{" "}
                     <a
-                      href="https://www.google.com/"
+                      href="https://github.com/Pranav-Singh-Devloper/FSTE_Hackathon"
                       className="text-blue-400 hover:underline"
+                      rel="noreferrer"
+                      target="_blank"
                     >
-                      github.com/iiei/breaking-silos
+                      Link Here
                     </a>
                   </p>
                 </div>
@@ -963,12 +1109,8 @@ export default function InterdisciplinaryEducationApp() {
         {/* Footer */}
         <footer className="bg-gray-900 border-t border-gray-800 py-8">
           <div className="max-w-4xl mx-auto px-4 text-center text-gray-400">
-            <p>
-              &copy; 2025 Indian Institute of Education Innovation. All rights
-              reserved.
-            </p>
             <p className="mt-2">
-              Created for the Systems Thinking in Education Conference
+              Created for Systems Thinking Hackathon 2025, Rishihood University
             </p>
           </div>
         </footer>
@@ -1093,10 +1235,6 @@ function ResourceCard({ title, icon, description }) {
       <div>
         <h3 className="font-semibold">{title}</h3>
         <p className="text-sm text-gray-400">{description}</p>
-        <button className="mt-2 px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm flex items-center">
-          <Download size={14} className="mr-1" />
-          Download
-        </button>
       </div>
     </div>
   );

@@ -1,0 +1,244 @@
+{UTF-8}
+Academic Administrative Rigidity  = A FUNCTION OF( Interdisciplinary Learning Participation\
+		)
+	~	
+	~		|
+
+Administrative Willingness  = A FUNCTION OF( Alumni Influence on Curriculum Reform,Innovation Culture Index\
+		,Public Sectory University Autonomy Index,Student Perceived Value of Interdisciplinary Learning\
+		)
+	~	
+	~		|
+
+Alumni Influence on Curriculum Reform  = A FUNCTION OF( )
+	~	
+	~		|
+
+Awareness Campaign Reach  = A FUNCTION OF( NEP 2020 Implementation Fidelity)
+	~	
+	~		|
+
+Curriculum Flexibility  = A FUNCTION OF( Academic Administrative Rigidity,Departmental Silo Intensity\
+		,Exam Structure Flexibility,Faculty Autonomy and Collaboration,Infrastructure Support\
+		,Private University Reform Index,Regulatory Flexiblity)
+	~	
+	~		|
+
+Delay in Implementation  = A FUNCTION OF( )
+	~	
+	~		|
+
+Departmental Budget Autonomy  = A FUNCTION OF( )
+	~	
+	~		|
+
+Departmental Silo Intensity  = A FUNCTION OF( Departmental Budget Autonomy,Interdisciplinary Learning Participation\
+		)
+	~	
+	~		|
+
+Employability Perception  = A FUNCTION OF( Interdisciplinary Learning Participation)
+	~	
+	~		|
+
+Exam Structure Flexibility  = A FUNCTION OF( )
+	~	
+	~		|
+
+Faculty Autonomy and Collaboration  = A FUNCTION OF( Administrative Willingness,Faculty Interdisciplinary Qualification\
+		,Incentives for Collaboration,"Reward System for Cross-Department Work")
+	~	
+	~		|
+
+Faculty Interdisciplinary Qualification  = A FUNCTION OF( )
+	~	
+	~		|
+
+Incentives for Collaboration  = A FUNCTION OF( )
+	~	
+	~		|
+
+Infrastructure Support  = A FUNCTION OF( )
+	~	
+	~		|
+
+Innovation Culture Index  = A FUNCTION OF( Interdisciplinary Learning Participation)
+	~	
+	~		|
+
+Interdisciplinary Learning Participation  = A FUNCTION OF( Curriculum Flexibility,Delay in Implementation\
+		,Student Perceived Value of Interdisciplinary Learning,Student Timetable Flexibility\
+		)
+	~	
+	~		|
+
+NEP 2020 Implementation Fidelity  = A FUNCTION OF( Interdisciplinary Learning Participation\
+		)
+	~	
+	~		|
+
+Private University Reform Index  = A FUNCTION OF( )
+	~	
+	~		|
+
+Public Sectory University Autonomy Index  = A FUNCTION OF( Interdisciplinary Learning Participation\
+		)
+	~	
+	~		|
+
+Regulatory Flexiblity  = A FUNCTION OF( "UGC/AICTE Guidelines Enforcement Strength")
+	~	
+	~		|
+
+"Reward System for Cross-Department Work"  = A FUNCTION OF( Interdisciplinary Learning Participation\
+		)
+	~	
+	~		|
+
+Student Perceived Value of Interdisciplinary Learning  = A FUNCTION OF( Awareness Campaign Reach\
+		,Employability Perception)
+	~	
+	~		|
+
+Student Timetable Flexibility  = A FUNCTION OF( Curriculum Flexibility,Employability Perception\
+		)
+	~	
+	~		|
+
+"UGC/AICTE Guidelines Enforcement Strength"  = A FUNCTION OF( )
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 2050
+	~	Year
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 2020
+	~	Year
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Year [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.25
+	~	Year [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$-1--1--1,0,|12||-1--1--1|-1--1--1|-1--1--1|-1--1--1|-1--1--1|96,96,100,2
+10,1,Interdisciplinary Learning Participation,774,294,66,26,8,3,0,0,-1,1,0,0,0,0,0,0,0,0
+10,2,Faculty Autonomy and Collaboration,1038,218,59,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,3,Curriculum Flexibility,556,186,55,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,4,Incentives for Collaboration,1195,102,46,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,5,Academic Administrative Rigidity,743,56,65,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,6,Departmental Silo Intensity,336,592,48,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,7,Regulatory Flexiblity,141,505,53,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,8,"UGC/AICTE Guidelines Enforcement Strength",147,351,58,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,9,Student Timetable Flexibility,589,370,49,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,10,Student Perceived Value of Interdisciplinary Learning,949,538,63,27,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,11,Infrastructure Support,326,331,59,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,12,Faculty Interdisciplinary Qualification,1335,82,62,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,13,Departmental Budget Autonomy,330,744,57,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,14,Administrative Willingness,1324,323,46,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,15,Employability Perception,988,420,64,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,16,Public Sectory University Autonomy Index,1590,307,64,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,17,Private University Reform Index,335,204,66,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,18,Innovation Culture Index,1371,438,64,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,19,NEP 2020 Implementation Fidelity,1055,772,62,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,20,Awareness Campaign Reach,1030,644,57,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,21,Alumni Influence on Curriculum Reform,1190,613,53,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,22,Exam Structure Flexibility,369,94,65,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,23,Delay in Implementation,1025,64,64,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,24,"Reward System for Cross-Department Work",1474,166,63,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,25,3,1,1,0,83,0,1,192,0,251-2-255,|||0-0-0,1|(624,303)|
+1,26,2,3,1,0,83,0,1,192,0,251-2-255,|||0-0-0,1|(763,154)|
+1,27,6,3,0,0,79,0,1,192,0,128-0-2,|||0-0-0,1|(0,0)|
+1,28,5,3,1,0,79,0,1,192,0,153-102-51,|||0-0-0,1|(613,85)|
+1,29,8,7,0,0,83,0,0,192,0,-1--1--1,,1|(0,0)|
+1,30,7,3,1,0,83,0,0,192,0,-1--1--1,,1|(413,313)|
+1,31,9,1,1,0,83,0,0,192,0,-1--1--1,,1|(666,336)|
+1,32,1,15,1,0,83,0,1,192,0,251-2-7,|||0-0-0,1|(933,325)|
+1,33,15,9,0,1,0,0,0,64,0,-1--1--1,,1|(0,0)|
+1,34,15,10,1,0,83,0,1,192,0,251-2-7,|||0-0-0,1|(981,476)|
+1,35,10,1,1,0,83,0,1,192,0,251-2-7,|||0-0-0,1|(777,467)|
+1,36,12,2,1,0,83,0,0,192,0,-1--1--1,,1|(1253,174)|
+1,37,4,2,0,0,83,0,0,192,0,-1--1--1,,1|(0,0)|
+1,38,13,6,1,0,79,0,0,192,0,-1--1--1,,1|(337,671)|
+1,39,11,3,1,0,83,0,0,192,0,-1--1--1,,1|(414,224)|
+1,40,24,2,1,0,83,0,1,192,0,251-2-255,|||0-0-0,1|(1294,210)|
+1,41,19,20,1,0,83,0,1,192,0,0-0-0,|||0-0-0,1|(1065,711)|
+1,42,20,10,1,0,83,0,1,192,0,0-0-0,|||0-0-0,1|(986,584)|
+1,43,10,14,0,0,83,0,1,192,0,0-0-0,|||0-0-0,1|(0,0)|
+1,44,14,2,1,0,83,0,1,192,0,251-2-255,|||0-0-0,1|(1148,230)|
+1,45,3,9,0,0,83,0,0,192,0,-1--1--1,,1|(0,0)|
+1,46,23,1,0,0,79,0,0,192,0,-1--1--1,,1|(0,0)|
+1,47,18,14,0,0,83,0,1,192,0,251-2-255,|||0-0-0,1|(0,0)|
+1,48,17,3,0,0,83,0,0,192,0,-1--1--1,,1|(0,0)|
+1,49,16,14,1,0,79,0,1,192,0,0-153-102,|||0-0-0,1|(1453,278)|
+1,50,21,14,1,0,83,0,0,192,0,-1--1--1,,1|(1208,423)|
+1,51,22,3,1,0,83,0,0,192,0,-1--1--1,,1|(421,161)|
+1,52,1,18,1,0,83,0,1,192,0,251-2-255,|||0-0-0,1|(1055,392)|
+12,53,0,699,217,27,27,5,7,0,1,-1,1,0,0,251-2-255,0-0-0,|||0-0-0,0,0,1,0,0,0
+R1
+12,54,0,878,421,36,36,4,7,0,1,-1,1,0,0,251-2-7,0-0-0,|||0-0-0,0,0,0,0,0,0
+R2
+1,55,1,24,1,0,83,0,1,192,0,251-2-255,|||0-0-0,1|(1134,299)|
+12,56,0,936,254,27,27,5,7,0,1,-1,1,0,0,251-2-255,0-0-0,|||0-0-0,0,0,1,0,0,0
+R3
+1,57,1,19,1,0,0,0,1,192,0,0-0-0,|||0-0-0,1|(732,664)|
+12,58,0,800,581,35,35,5,7,0,1,-1,1,0,0,0-0-0,0-0-0,|||0-0-0,0,0,0,0,0,0
+R4
+1,59,1,5,1,0,83,0,1,192,0,153-102-51,|||0-0-0,1|(779,147)|
+12,60,0,685,109,27,27,5,7,0,1,-1,1,0,0,153-102-51,0-0-0,|||0-0-0,0,0,1,0,0,0
+B1
+1,61,1,6,1,0,83,0,1,192,0,128-0-2,|||0-0-0,1|(580,454)|
+12,62,0,514,420,29,29,4,7,0,1,-1,1,0,0,128-0-2,0-0-0,|||0-0-0,0,0,0,0,0,0
+B2
+1,63,1,16,1,0,83,0,1,192,0,0-153-102,|||0-0-0,1|(1187,397)|
+12,64,0,1128,354,27,27,5,7,0,1,-1,1,0,0,0-153-102,0-0-0,|||0-0-0,0,0,1,0,0,0
+B3
+///---\\\
+:L<%^E!@
+5:Faculty Autonomy and Collaboration
+19:100,0
+24:0
+25:0
+26:0
+23:0
+15:0,0,0,0,0,0
+27:0,
+34:0,
+42:0
+72:0
+73:0
+95:0
+96:0
+97:0
+77:0
+78:0
+102:1
+93:0
+94:0
+92:0
+91:0
+90:0
+87:0
+75:
+43:
+103:8,8,8,3,8
+105:0,0,0,0,0,0,0,0,0,0
+104:Vensim Sans|12||0-0-0|0-0-0|-1--1--1|0-0-255|192-192-192|-1--1--1
